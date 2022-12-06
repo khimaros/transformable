@@ -1,0 +1,9 @@
+sentencepiece
+torch
+torchvision
+torchaudio
+transformers
+scipyftfy
+accelerate
+tensorboard
+toml

@@ -1,0 +1,64 @@
+[DEFAULT]
+
+# Default values are commented out below.
+# Uncomment and change to set config wide defaults.
+
+# number of images to produce per prompt
+#num_outputs = 1
+
+# output directory for generated images
+#output_dir = "./output/"
+
+# directory to look for model repositories
+#models_dir = "~/src/huggingface.co/"
+
+# kind of pipeline (text-generation, question-answering, conversational)
+#kind = "text-generation"
+
+# transformer model to use for inference
+#model = "distilbert-base-uncased-distilled-squad"
+
+# allow automatic downloading of models
+#download_models = false
+
+# seed to use for generator
+#seed = 0
+
+# number of repetitions for task
+#repeat = 1
+
+
+[introductions]
+
+# kind of pipeline (text-generation, question-answering, conversational)
+kind = "conversational"
+
+# transformer model to use for inference
+model = "facebook/blenderbot-400M-distill"
+
+# prompts to generate text from
+prompts = ["Hi, my name is Amy, what is your name?"]
+
+
+[home-planet]
+
+# kind of pipeline (text-generation, question-answering, conversational)
+kind = "question-answering"
+
+# context to use for answering the question
+context = "Planet earth is the third planet from the sun our solar system. Most humans who were ever born currently live there."
+
+# prompts to generate text from
+prompts = ["I am a human, which planet am I from?"]
+
+
+[meaning-of-life]
+
+# kind of pipeline (text-generation, question-answering, conversational)
+kind = "text-generation"
+
+# transformer model to use for inference
+model = "xlnet-large-cased"
+
+# prompts to generate text from
+prompts = ["The meaning of life is"]
