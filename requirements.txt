@@ -3,7 +3,8 @@ torch
 torchvision
 torchaudio
 transformers
-scipyftfy
+scipy
+ftfy
 accelerate
 tensorboard
 toml

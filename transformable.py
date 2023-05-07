@@ -171,13 +171,13 @@ def invoke_task(config):
     tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_path)
 
     if config['kind'] == 'text-generation':
-        model = transformers.AutoModelForCausalLM.from_pretrained(model_path, local_files_only=True)
+        model = transformers.AutoModelForCausalLM.from_pretrained(model_path, local_files_only=local_files_only)
 
     elif config['kind'] == 'question-answering':
-        model = transformers.AutoModelForQuestionAnswering.from_pretrained(model_path, local_files_only=True)
+        model = transformers.AutoModelForQuestionAnswering.from_pretrained(model_path, local_files_only=local_files_only)
 
     elif config['kind'] == 'conversational':
-        model = transformers.AutoModelForSeq2SeqLM.from_pretrained(model_path, local_files_only=True)
+        model = transformers.AutoModelForSeq2SeqLM.from_pretrained(model_path, local_files_only=local_files_only)
 
     pipe = transformers.pipeline(config['kind'], model=model, tokenizer=tokenizer)
 
